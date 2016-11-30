@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Sipariş Hesaplayıcı",
+  "short_name": "Sipariş Hesaplayıcı",
+  "version": "1.0",
+  "current_locale": "tr",
+  "description": "Bu güne kadar Yemek Sepeti üzerinden ne kadar sipariş verdiğini tahmin edebiliyorsundur. Peki ya Yemek Sepeti için ne kadar para harcadığını hiç merak ettin mi?",
+  "author": "Deniz Çağın Demirci",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "content_scripts": [{
+      "js": [ "js/jquery.min.js", "js/background.js" ],
+      "css": [ "css/main.css" ],
+      "matches": [ "https://www.yemeksepeti.com/hesabim/onceki-siparislerim" ],
+      "run_at": "document_end"
+  }],
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}
